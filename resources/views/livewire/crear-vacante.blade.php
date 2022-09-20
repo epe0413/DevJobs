@@ -43,7 +43,7 @@
         <textarea
             name="descripcion"
             placeholder="Descripción general del puesto, experiencia"
-            class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full h-72"
+            class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full h-40"
         >
         </textarea>
     </div>
