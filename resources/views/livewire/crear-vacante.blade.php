@@ -10,9 +10,9 @@
             :value="old('titulo')"
             placeholder="Título Vacante"/>
 
-            @error('titulo')
-                {{$message}}
-            @enderror
+        @error('titulo')
+            <livewire:mostrar-alerta :message="$message"/>
+        @enderror
     </div>
 
     <div>
