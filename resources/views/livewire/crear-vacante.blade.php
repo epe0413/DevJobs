@@ -1,4 +1,4 @@
-<form class="md:w-1/2 space-y-3">
+<form class="md:w-1/2 space-y-3" wire:submit.prevent='crearVacante'>
     <div>
         <x-input-label for="titulo" :value="__('Título Vacante')" />
 
@@ -9,6 +9,10 @@
             wire:model="titulo"
             :value="old('titulo')"
             placeholder="Título Vacante"/>
+
+            @error('titulo')
+                {{$message}}
+            @enderror
     </div>
 
     <div>
