@@ -54,7 +54,12 @@
     <div>
         <x-input-label for="empresa" :value="__('Empresa')" />
 
-        <x-text-input id="empresa" class="block mt-1 w-full" type="text" wire:model="empresa" :value="old('empresa')" placeholder="Empresa: ej. Netflix, Uber, Shopify"/>
+        <x-text-input 
+            id="empresa"
+            class="block mt-1 w-full"
+            type="text"
+            wire:model="empresa"
+            :value="old('empresa')" placeholder="Empresa: ej. Netflix, Uber, Shopify"/>
 
         @error('empresa')
             <livewire:mostrar-alerta :message="$message"/>
@@ -64,7 +69,13 @@
     <div>
         <x-input-label for="ultimo_dia" :value="__('Último día para postularse')" />
 
-        <x-text-input id="ultimo_dia" class="block mt-1 w-full" type="date" wire:model="ultimo_dia" :value="old('ultimo_dia')"/>
+        <x-text-input
+            id="ultimo_dia"
+            class="block mt-1 w-full"
+            type="date"
+            wire:model="ultimo_dia"
+            :value="old('ultimo_dia')"
+        />
 
         @error('ultimo_dia')
             <livewire:mostrar-alerta :message="$message"/>
