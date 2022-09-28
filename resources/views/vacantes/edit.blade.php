@@ -14,7 +14,9 @@
                     </h1>
 
                     <div class="md:flex md:justify-center p-3">
-                        <livewire:editar-vacante/>
+                        <livewire:editar-vacante
+                            :vacante="$vacante"
+                        />
                     </div>
                 </div>
             </div>
