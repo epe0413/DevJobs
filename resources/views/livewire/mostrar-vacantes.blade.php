@@ -3,7 +3,7 @@
         @forelse ($vacantes as $vacante)
             <div class="p-6 bg-white border-b border-gray-200 hover:bg-indigo-100 md:flex md:justify-between md:items-center">
                 <div class="">
-                    <a href="#" class="text-lg font-bold">
+                    <a href="{{ route('vacantes.show', $vacante->id)}}" class="text-lg font-bold">
                         {{ $vacante->titulo}}
                     </a>
                     <p class="text-sm text-gray-600 font-bold">{{ $vacante->empresa }}</p>

@@ -33,9 +33,12 @@ class VacanteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Vacante $vacante)
     {
         //
+        return view('vacantes.show',[
+            'vacante' => $vacante
+        ]);
     }
 
     /**
