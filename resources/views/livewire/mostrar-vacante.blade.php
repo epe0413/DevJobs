@@ -12,10 +12,10 @@
                 <span class="font-normal">{{ $vacante->ultimo_dia->toFormattedDateString() }}</span>
             </p>
             <p class="font-bold text-sm text-gray-800 my-1">Categoria: 
-                <span class="font-normal">{{ $vacante->categoria_id }}</span>
+                <span class="font-normal">{{ $vacante->categoria->categoria }}</span>
             </p>
             <p class="font-bold text-sm text-gray-800 my-1">Salario: 
-                <span class="font-normal">{{ $vacante->salario_id }}</span>
+                <span class="font-normal">{{ $vacante->salario->salario }}</span>
             </p>
         </div>
     </div>
