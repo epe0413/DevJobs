@@ -21,7 +21,7 @@
     </div>
     <div class="md:grid md:grid-cols-6 gap-4">
         <div class="md:col-span-2">
-            <img src="{{ asset('storage/vacantes/' . $vacante->imagen) }}" alt="{{ 'Imagen Vacante' . $vacante->titulo }}">
+            <img class="rounded-md" src="{{ asset('storage/vacantes/' . $vacante->imagen) }}" alt="{{ 'Imagen Vacante' . $vacante->titulo }}">
         </div>
         <div class="md:col-span-4">
             <h2 class="text-xl font-bold mb-2">Descripción del puesto</h2>
