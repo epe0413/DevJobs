@@ -99,6 +99,16 @@
 
             <!-- Responsive Settings Options -->
             <div class="pt-4 pb-1 border-t border-gray-200">
+                @if(auth()->user()->rol===2)
+                    <div class="flex gap-2 items-center p-3">
+                        <a class="w-7 h-7 bg-indigo-600 hove:bg-indigo-800 rounded-full flex flex-col justify-center items-center text-sm font-extrabold text-white" href="{{ route('notificaciones')}}">
+                            {{ auth()->user()->unreadNotifications->count() }}
+                        </a>
+                        <p class="text-base font-medium text-gray-600">
+                            @choice('Notificacion|Notificaciones', auth()->user()->unreadNotifications->count())
+                        </p>
+                    </div>
+                @endif
                 <div class="px-4">
                     <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                     <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
