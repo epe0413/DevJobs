@@ -12,7 +12,29 @@
                     <h1 class="text-2xl font-bold text-center mb-5">Candidatos Vacante: {{$vacante->titulo}}</h1>
 
                     <div class="md:flex md:justify-center p-3">
-                        
+                        <ul class="divide-y divide-gray-200 w-full">
+                            @forelse ($vacante->candidatos as $candidato)
+                                <li class="p-2 flex items-center">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-800">{{$candidato->user->name}}</p>
+                                        <p class="text-gray-600">{{ $candidato->user->email}}</p>
+                                        <p class="text-gray-600">Día que se postuló: <span class="font-medium">{{ $candidato->created_at->diffForHumans()}}</span></p>
+                                    </div>
+                                    <div>
+                                        <a
+                                            class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 test-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50"
+                                            href=" {{ asset('storage/cv/' . $candidato->cv)}} "
+                                            target="_blank"
+                                            rel="noreferrer noopener"    
+                                        >
+                                            Ver CV
+                                        </a>
+                                    </div>
+                                </li>
+                            @empty
+                                <p class="p-3 text-center text-sm text-gray-600">No hay candidatos aún</p>
+                            @endforelse
+                        </ul>
                     </div>
                 </div>
             </div>
