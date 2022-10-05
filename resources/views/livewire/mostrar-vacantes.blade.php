@@ -10,7 +10,7 @@
                     <p class="text-sm text-gray-500">Último día: {{ $vacante->ultimo_dia->format('d/m/y')}}</p>
                 </div>
                 <div class="flex flex-col md:flex-row items-stretch gap-2 mt-3 md:mt-0">
-                    <a href="#"
+                    <a href="{{ route('candidatos.index', $vacante) }}"
                         class="bg-slate-800 py-2 px-4 rounded-lg text-white text-xs font-bold text-center"
                     >
                         Candidatos
